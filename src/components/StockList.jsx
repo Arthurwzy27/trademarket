@@ -1,4 +1,6 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect } from 'react';
+
+import './StockList.css';
 
 const StockList = () => {
 const [stockList, setStockList] = useState([])
@@ -16,7 +18,7 @@ const [stockList, setStockList] = useState([])
 
   return (
     <>
-      <table>
+      <table className='stocklist-overlay'>
         <thead>
           <tr>
             <th>ID</th>
@@ -27,9 +29,9 @@ const [stockList, setStockList] = useState([])
           </tr>
         </thead>
         <tbody>
-        {stockList.map( stock => {
+        {stockList.map( (stock, id) => {
           return (
-            <tr>
+            <tr key={id}>
               <td>{stock.symbol}</td>
               <td>{stock.name}</td>
               <td>{stock.current_price}</td>
@@ -45,3 +47,5 @@ const [stockList, setStockList] = useState([])
 }
 
 export default StockList
+
+
