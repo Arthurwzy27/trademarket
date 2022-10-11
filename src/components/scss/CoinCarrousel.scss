@@ -1,0 +1,24 @@
+.trending-table {
+  // background-color: rgb(217, 14, 14);
+
+  .trending-table-coin {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    :hover {
+      background-color: rgba(128, 128, 128, 0.524);
+    }
+
+    .trending-coin-item {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      // justify-content: space-around;
+      padding-left: 1rem;
+      justify-content: space-between;
+
+    }
+  }
+
+}
