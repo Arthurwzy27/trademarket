@@ -1,0 +1,49 @@
+.coin-details-container {
+  width: 100%;
+  margin-top: 1rem;
+
+  // --- COIN KEYS ---
+  .coin-details {
+    display: grid;
+
+    .coin-detail-key {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .coin-details-name {
+        font-size: 2rem;
+        font-weight: blod;
+      }
+
+      .coin-details-id {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .coin-detail-keyNum {
+    text-align: center;
+
+    .coin-detail-keyPrice {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .coin-detail-key100 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+  }
+
+
+
+
+  // --- CHART ---
+  .hitorical-chart-container {
+    width: 100%;
+  }
+}
