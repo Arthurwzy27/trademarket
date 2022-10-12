@@ -1,0 +1,23 @@
+.fav-coin-container {
+
+  .fav-coin-noShow {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: space-evenly;
+
+    .fav-delete-coin {
+      width: 1rem;
+      border: none;
+      background-color: transparent;
+    }
+
+    .fav-coin-logo {
+      width: 50%;
+    }
+    .fav-coin-price {
+
+    }
+  }
+}
