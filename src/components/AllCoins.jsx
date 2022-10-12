@@ -27,7 +27,7 @@ const AllCoins = () => {
       console.log('log IF newFavs:', newFavs)
 
       // ---------- Not logging because when favorite, coin removed from list so can't re-add
-      // console.log(`${coin.name} is already in your favorites`)
+      console.log(`${coin.name} is already in your favorites`)
       setFavorites(newFavs)
     } else {
       const newFavs = favorites.filter(item => item.id !== coin.id)
@@ -35,8 +35,6 @@ const AllCoins = () => {
       // setSearchCoin('')
       // console.log(`addToFav -> ${coin.id} in ElseIf`, favorites)
     }
-    console.log('Favorite after addToFAAAV', favorites)
-
 
     // const alreadyInFav = favorites
           // .filter(fav => fav.id !== id)
@@ -61,6 +59,11 @@ const AllCoins = () => {
     // setListOfCoin(listOfCoin)
 
   }
+
+  const deleteFav = id => {
+    const removedCoin = favorites.filter(item => item.id !== id);
+    setFavorites(removedCoin)
+  }
   // ---END TEST
 
 
@@ -81,7 +84,7 @@ const AllCoins = () => {
       {favorites.length > 0 &&
         favorites.map((coin, id) =>
           <div key={id} className='favoriteCoin-container'>
-            <FavoriteCoin favorites={coin} />
+            <FavoriteCoin favorites={coin} deleteFav={deleteFav} />
           </div>
       )}
 
